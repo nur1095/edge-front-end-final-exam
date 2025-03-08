@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin-top: 50px;
+    }
+    .score {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    .button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+ 
+</style>
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="nine.html">Problem 9</a>
+    </nav> 
+    <br><br>
+    <h1>Problem 5</h1><br>
+    <div>
+        <p id="score">Your score is: <span>0</span></p>
+        <button id="increaseButton">Increase</button>
+        <button id="decreaseButton">Decrease</button>
+    </div>
+    <script>
+    
+        let score = 0;
+    
+        const scoreDisplay = document.getElementById('score');
+    
+    
+        function updateScoreDisplay() {
+            scoreDisplay.textContent = `Your Score is: ${score}`;
+        }
+    
+    
+        const increaseButton = document.getElementById('increaseButton');
+        const decreaseButton = document.getElementById('decreaseButton');
+    
+        
+        increaseButton.addEventListener('click', function() {
+            score += 1; 
+            updateScoreDisplay(); 
+        });
+    
+        
+        decreaseButton.addEventListener('click', function() {
+            score -= 1; 
+            updateScoreDisplay(); 
+        });
+    </script>
+</body>
+</html>
